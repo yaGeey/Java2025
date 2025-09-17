@@ -1,7 +1,12 @@
-// Із заданого тексту видалити всі слова визначеної довжини, що починаються з приголосної літери. 
+/**
+ * Клас Strings містить методи для роботи з рядками.
+ * Основна функція — видалити всі слова певної довжини, що починаються з приголосної.
+ */
 public class Strings {
-   private static final char[] consonants = { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
-
+   /** Масив приголосних літер англійського алфавіту (immutable). */
+   private static final char[] consonants = { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's',
+         't', 'v', 'w', 'x', 'y', 'z' };
+   
    public static void main(String[] args) {
       StringBuffer s = new StringBuffer("Cat dog sun tree bird fox ant car");
       System.out.println("Original string: " + s);
@@ -11,6 +16,13 @@ public class Strings {
       System.out.println("removeConsonantWordsOfLength " + targetLength + ": " + result);
    }
    
+   /**
+     * Видаляє з рядка всі слова заданої довжини, які починаються з приголосної.
+     *
+     * @param s рядок для обробки у вигляді StringBuffer
+     * @param length довжина слів, які потрібно видалити
+     * @return новий StringBuffer з обробленим рядком
+     */
    public static StringBuffer removeConsonantWordsOfLength(StringBuffer s, int length) {
       StringBuffer result = new StringBuffer(); // result string
       StringBuffer currentWord = new StringBuffer(); // current word temp buffer
@@ -40,6 +52,12 @@ public class Strings {
       return result;
    }
 
+   /**
+     * Перевіряє, чи є символ приголосною літерою.
+     *
+     * @param c символ для перевірки
+     * @return true, якщо символ приголосний, false — інакше
+     */
    public static boolean isConsonant(char c) {
       c = Character.toLowerCase(c);
       for (char consonant : consonants) {
