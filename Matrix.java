@@ -1,4 +1,4 @@
-package lab1;
+
 
 public class Matrix {
     private final int rows;
