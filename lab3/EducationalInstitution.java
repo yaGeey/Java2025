@@ -1,3 +1,4 @@
+package lab3;
 // Визначити клас навчальний заклад, який складається як мінімум з 5-и полів. 
 public class EducationalInstitution {
    private String name;
