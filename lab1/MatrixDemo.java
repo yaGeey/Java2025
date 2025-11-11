@@ -1,4 +1,4 @@
-package lab4;
+package lab1;
 
 public class MatrixDemo {
     public static void main(String[] args) {
